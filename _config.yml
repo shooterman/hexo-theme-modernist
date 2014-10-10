@@ -1,7 +1,7 @@
 menu:
-  Home: /
-  Archives: /archives
-rss: /atom.xml
+  Home: /blog
+  Archives: /blog/archives
+rss: /blog/atom.xml
 
 archive_date_format: MMM DD
 fancybox: true
