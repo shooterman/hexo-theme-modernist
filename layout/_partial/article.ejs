@@ -13,9 +13,16 @@
     <% if (post.excerpt && index){ %>
       <%- post.excerpt %>
     <% } else { %>
-      <%- post.content %>
+      <% var br = post.content.indexOf('\n'); %>
+
+      <% if(br < 0 || !index) { %>
+        <%- post.content %>
+      <% } else { %>
+        <%- post.content.substring(0, br) %>
+      <% } %>
     <% } %>
   </div>
+
   <footer<% if (index) { %> class="end-sep"<% } %>>
     <% if (index){ %>
       <% if (post.excerpt){ %>
